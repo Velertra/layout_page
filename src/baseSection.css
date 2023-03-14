@@ -1,0 +1,34 @@
+.content {
+    background: green;
+    display: flex;
+    flex-flow: column;
+    height: 95%;
+    width: 95%;
+    flex-wrap: wrap;
+    position: absolute;
+    
+}
+
+.top_section{
+    background: blue;
+    height: 20%;
+    width: 80%;
+    
+}
+
+.main_section{
+    background: purple;
+    
+    height: 80%;
+
+}
+
+.left_side_bar{
+    background: red;
+    height: 100%;
+    width: 20%;
+
+   
+   
+}
+
