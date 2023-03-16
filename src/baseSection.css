@@ -15,20 +15,25 @@
     width: 80%;
     
 }
-
-.main_section{
-    background: purple;
-    
-    height: 80%;
-
-}
+ 
 
 .left_side_bar{
     background: red;
     height: 100%;
     width: 20%;
-
-   
-   
 }
 
+
+.main_section{
+    background: purple;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+   /*  position: absolute;
+    left: 184px;
+    bottom: 0px; */
+    
+
+}

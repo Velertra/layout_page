@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 import './createDiv';
 import './baseSection.css'
+import './mainSection.css'
 
 
 
