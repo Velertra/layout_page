@@ -18,8 +18,19 @@ class DivCreator {
         singleBtn.innerHTML = btnLable;
     }
 
+    letItRide(title, other) {
+        //let args = Array.from(arguments);
+        console.log(title)
+       // for(let x = 0; x < other.length; x++){
+            //console.log(tilte, other[x])
+        //}
+        
+    }
+
 };
 let makeAnElem = new DivCreator();
+
+makeAnElem.letItRide({title:'cho', other:'cho2', other:'cho3', other:'cho4'})
 
 //base divs
 makeAnElem.createDiv(document.body, "content")
