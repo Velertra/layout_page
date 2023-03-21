@@ -1,14 +1,24 @@
+    function letItRide(title, other) {
+        this.title = title;
+        this.other = other;
+        //let args = Array.from(arguments);
+        console.log(this.other)
+    // for(let x = 0; x < other.length; x++){
+            //console.log(tilte, other[x])
+        //}
+        
+    }
+
 
 
 class DivCreator {
     createDiv(divPosition, divName) {
         
-       //console.log('fff')
-        
         let singleDiv = document.createElement('div');
         singleDiv.setAttribute("id", divName);
         singleDiv.classList.add(divName);
         divPosition.appendChild(singleDiv)
+        
     }
     createBtn(btnPosition, btnName, btnLable) {
         let singleBtn = document.createElement('div');
@@ -18,19 +28,29 @@ class DivCreator {
         singleBtn.innerHTML = btnLable;
     }
 
-    letItRide(title, other) {
-        //let args = Array.from(arguments);
-        console.log(title)
-       // for(let x = 0; x < other.length; x++){
-            //console.log(tilte, other[x])
-        //}
-        
-    }
+    letItRide(...run) {
+        let runner = Array.from(run);
+       
+        let conversion = toString(runner[0])
 
+        let placement = document.getElementsByClassName(conversion);
+
+        let divNames = runner.slice(1);
+
+        //console.log(typeof placement)
+        for(let x = 0; x < divNames.length; x++){
+            let singleDiv = document.createElement('div')
+            singleDiv.setAttribute('id', divNames[x])
+            singleDiv.classList.add(divNames[x])
+            placement.appendChild(singleDiv)
+        }     
+    }
 };
+
 let makeAnElem = new DivCreator();
 
-makeAnElem.letItRide({title:'cho', other:'cho2', other:'cho3', other:'cho4'})
+makeAnElem.letItRide("content", 'cho2', 'cho3', 'cho4')
+
 
 //base divs
 makeAnElem.createDiv(document.body, "content")
