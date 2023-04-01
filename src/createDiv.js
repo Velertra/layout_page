@@ -1,4 +1,19 @@
-    function letItRide(title, other) {
+class DivCreator {
+    createDiv(divPosition, ...divName) {
+        for(let i = 0; i < divName.length; i++) {
+            let singleDiv = document.createElement('div');
+            singleDiv.setAttribute("id", divName[i]);
+            singleDiv.classList.add(divName[i]);
+            divPosition.appendChild(singleDiv)
+        }
+    }
+}
+
+let makeAnElem = new DivCreator();
+makeAnElem.createDiv(content, "cho1", "cho2", "cho3")
+
+
+/*     function letItRide(title, other) {
         this.title = title;
         this.other = other;
         //let args = Array.from(arguments);
@@ -91,3 +106,4 @@ makeAnElem.createDiv(your_projects, "project_div");
 
 
 
+ */
